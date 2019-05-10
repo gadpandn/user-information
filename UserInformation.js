@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom',
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router-dom'
 
 class UserInformation extends Component {
     state = {
@@ -9,7 +10,6 @@ class UserInformation extends Component {
         userDetails: [],
         showModalWindow : false
     };
-    
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(response => response.json())
